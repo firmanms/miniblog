@@ -19,11 +19,10 @@ export async function createCategory(formData: FormData) {
   
   if (error) {
     console.error("Supabase Error [createCategory]:", error);
-    return { error: error.message };
+    return;
   }
 
   revalidatePath("/admin/categories");
-  return { success: true };
 }
 
 export async function deleteCategory(id: string) {

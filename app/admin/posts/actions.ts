@@ -33,7 +33,8 @@ export async function createPost(formData: FormData) {
   });
 
   if (error) {
-    return { error: error.message };
+    console.error("Supabase Error [createPost]:", error);
+    return;
   }
 
   revalidatePath("/admin/posts");
@@ -62,7 +63,8 @@ export async function updatePost(formData: FormData) {
   }).eq("id", id);
 
   if (error) {
-    return { error: error.message };
+    console.error("Supabase Error [updatePost]:", error);
+    return;
   }
 
   revalidatePath("/admin/posts");
