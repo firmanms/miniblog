@@ -6,6 +6,8 @@ import { Footer } from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Catatan",
   description: "A minimal and professional blog platform",
